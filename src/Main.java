@@ -79,19 +79,16 @@ public class Main {
 
     public static void task6() {
         System.out.println("Задача 6");
-        short trainCapacity = 102;
-        short standingPlace = 42;
+        short trainCapacity = 103;
+        boolean signalAvailability = trainCapacity >102;
         short seat = 60;
-        System.out.println("");
-        if (trainCapacity >=102) {
+        if (signalAvailability) {
             System.out.println("Вагон полностью занят");
         }
-        if (seat >=60) {
-            System.out.println();
-
-
-
+        if (seat <60 && trainCapacity >=102) {
+            System.out.println("В вагоне есть сидячие места");
+        } else {
+            System.out.println("В вагоне только стоячие места");
         }
-
     }
 }
