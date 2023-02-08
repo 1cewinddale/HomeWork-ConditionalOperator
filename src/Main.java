@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -6,6 +8,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -83,11 +86,28 @@ public class Main {
         short totalPassengers = 103;
         short seatPlace = 60;
         if (totalPassengers > 0 && totalPassengers < seatPlace) {
-            System.out.println("В вагоне " + (seatPlace-totalPassengers)+ " сидячих мест");
-        } else if (totalPassengers >= seatPlace && totalPassengers <trainCapacity) {
-            System.out.println("В вагоне " +(trainCapacity-seatPlace)+ " стоячих мест " );
-        }else {
+            System.out.println("В вагоне " + (seatPlace - totalPassengers) + " сидячих мест");
+        } else if (totalPassengers >= seatPlace && totalPassengers < trainCapacity) {
+            System.out.println("В вагоне " + (trainCapacity - seatPlace) + " стоячих мест ");
+        } else {
             System.out.println("В вагоне нет свободных мест");
         }
+    }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+        int one = 10;
+        int two = 40;
+        int three = 30;
+        int max;
+        if (one > two) {
+            max = one;
+        } else {
+            max = two;
+        }
+        if (max < three) {
+            max = three;
+        }
+        System.out.println("большее число " + max);
     }
 }
